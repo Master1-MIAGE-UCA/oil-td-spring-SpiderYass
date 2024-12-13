@@ -1,22 +1,20 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/QGf4F8_h)
 # Projet "Dice" - Gestion de lancés de dés avec Spring Boot
 
 ## Description
 Le projet "Dice" est une application construite avec Spring Boot permettant de simuler des lancés de dés et de gérer un historique des résultats en base de données. Ce projet met en œuvre les concepts fondamentaux de Spring Boot, notamment l'injection de dépendances, les services RESTful, les entités JPA et les repositories.
-
 
 ## Étapes de réalisation
 
 ### 1. Création du projet Spring Boot
 - Utilisez [Spring Initializr](https://start.spring.io/) pour créer le projet.
 - Choisissez la dernière version de Spring Boot disponible (LTS).
-- Optez pour **Maven** ou **Gradle** comme outil de gestion de dépendances.
-- Ajoutez les dépendances nécessaires : **Spring Web**, **Spring Data JPA**, **H2 Database** .
+- Optez pour **Maven** comme outil de gestion de dépendances.
+- Ajoutez les dépendances nécessaires : **Spring Web**, **Spring Data JPA**, **H2 Database**.
 
 ### 2. Configuration du projet
 - Configurez l'application pour qu'elle utilise le port **8081**.
 - Donnez un nom (**dice**) au projet dans le fichier de configuration :
-  - Utilisez **`application.properties`** ou **`application.yml`** selon votre préférence.
+  - Utilisez **`application.properties`**.
 
 ### 3. Création de la classe `Dice`
 - Implémentez une classe représentant un dé avec les méthodes nécessaires pour effectuer un lancé.
@@ -26,7 +24,7 @@ Le projet "Dice" est une application construite avec Spring Boot permettant de s
 - Modélisez une entité JPA `DiceRollLog` comprenant les champs suivants :
   - **`id`** : Identifiant unique.
   - **`diceCount`** : Nombre de dés lancés.
-  - **`results`** : Liste ou chaîne des valeurs obtenues. Il existe de nombreuses façons de stocker des valeurs simples (simple String), certaines sont plus élégantes (@ElementCollection) que d'autres, vous pouvez choisir la solution qui vous conviendra.
+  - **`results`** : Liste des valeurs obtenues.
   - **`timestamp`** : Horodatage du lancé.
 - Utilisez des annotations JPA comme `@Entity`, `@Id`, `@GeneratedValue`, etc.
 
@@ -61,14 +59,12 @@ Le projet "Dice" est une application construite avec Spring Boot permettant de s
 - **Lombok** :
   - Utilisez Lombok pour simplifier les getters, setters et constructeurs de vos entités.
 
----
-
 ## Livrables
 - Le code complet du projet, accessible via un dépôt GitHub.
-- Un fichier `README.md` décrivant les étapes réalisées
+- Un fichier `README.md` décrivant les étapes réalisées.
 
 ## Technologies
 - **Framework principal** : Spring Boot
-- **Base de données** : H2 
+- **Base de données** : H2
 - **Documentation API** : Swagger (bonus)
 - **Simplification de code** : Lombok (bonus)
